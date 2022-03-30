@@ -302,24 +302,26 @@ const Home = (props: HomeProps) => {
             borderRadius: 6,
           }}
         >
+
+          <img
+            src={`https://bafkreiauhoq55udydxakbibvowariit7faf2ywtoo2nlavvgz6bpgas4ru.ipfs.nftstorage.link/?ext=gif`}
+            alt={"Astral NFT"}
+            loading="lazy"
+            style={{
+              width: "100%",
+              borderRadius: "6px",
+              marginBottom: 10,
+            }}
+          />
+
+          <Typography variant="caption" color="textSecondary">
+            Astral Whale (v3) {process.env.REACT_APP_CANDY_MACHINE_ID}
+          </Typography>
+
           {!wallet.connected ? (
             <ConnectButton>Connect Wallet</ConnectButton>
           ) : (
             <>
-              <img
-                src={`https://bafkreicbj4ozehy7nqhpd3ksu7bfu4ekry7iwzlxojfpe4zlvrcmvvmxz4.ipfs.nftstorage.link/?ext=gif`}
-                alt={"Astral NFT"}
-                loading="lazy"
-                style={{
-                  width: "100%",
-                  borderRadius: "6px",
-                  marginBottom: 10, 
-                }}
-              />
-
-              <Typography variant="caption" color="textSecondary">
-                MACHINE_ID: {process.env.REACT_APP_CANDY_MACHINE_ID}
-              </Typography>
 
               {candyMachine && (
                 <Grid
